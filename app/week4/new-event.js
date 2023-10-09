@@ -6,6 +6,7 @@ export default function NewEvent() {
     const[name, setName] = useState("");
     const[quantity, setQuantity] = useState(1);
     const [catergory, setCategory] = useState("produce");
+    const [eventCreated, setEventCreated] = useState(false);
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -22,8 +23,8 @@ export default function NewEvent() {
     setEventCreated(true);
 
     setName("");
-    setQuantity(1);
-    setCategory("produce");
+    setQuantity("");
+    setCategory("");
 
     setEventCreated(false);
 };
@@ -86,7 +87,9 @@ export default function NewEvent() {
                         <option value="Other">Other</option>
                     </select>
                 </div>
-                <button className="bg-blue-500 text-white px-4 py-2 rounded">
+                <button
+                type ="submit"
+                className="bg-blue-500 text-white px-4 py-2 rounded">
                     Submit
                 </button>
             </form>
