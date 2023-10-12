@@ -10,7 +10,7 @@ export default function NewEvent() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // this prevents the form's default submission behvior
+        // this prevents the form's default submission behavior
     
     const NewEvent = {
         name,
@@ -50,7 +50,7 @@ export default function NewEvent() {
                     <label className="block mb-2">Name</label>
                     <input
                         required
-                        className="border border-gray-400 p-2 w-full"
+                        className="text-black border border-gray-400 p-2 w-full"
                         type="text"
                         value={name}
                         onChange={handleNameChange}
@@ -59,7 +59,7 @@ export default function NewEvent() {
                 <div className="mb-5">
                     <label className="block mb-2">Quantity</label>
                     <input
-                        className="border border-gray-400 p-2 w-full"
+                        className="text-black border border-gray-400 p-2 w-full"
                         type="number"
                         min="1"
                         max="99"
@@ -70,7 +70,7 @@ export default function NewEvent() {
                 <div className="mb-5">
                     <label className="block mb-2">Category</label>
                     <select
-                        className="border border-gray-400 p-2 w-full"
+                        className="text-black border border-gray-400 p-2 w-full"
                         value={catergory}
                         onChange={handleCategoryChange}
                     >
