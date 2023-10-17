@@ -10,12 +10,28 @@ export default function ItemList() {
   let array = itemsData;
 
   //below returns the javascript
-  let sortedarray = array.sort((a, b) => {
+  array.sort((a, b) => {
     return a.name.localeCompare(b.name);
   });
 
+  if (sortby === "category") {
+    array.sort ((a,b) => {
+      return a.category.localeCompare(b.category)
+    })
+  };
+
   // below returns the html that the UI front end will render
-  return sortedarray.map((item) => (
-    <Item name={item.name} quantity={item.quantity} category={item.category} />
-  ));
+  return (
+    <div>
+      <button onClick={() => setSortBy("name")}>Sort by Name</button>
+      <button onClick={() => setSortBy("category")}> Sort by Category </button>
+      {array.map((item) => (
+        <Item
+          name={item.name}
+          quantity={item.quantity}
+          category={item.category}
+        />
+      ))}
+    </div>
+  );
 }
