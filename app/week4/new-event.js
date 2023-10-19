@@ -43,14 +43,14 @@ export default function NewEvent() {
     };
 
     return (
-        <main>
+        <main className= "w-1/3" >
             <h1 className="text-5x1 font-bold mb-5"> New Item </h1>
             <form onSubmit={handleSubmit}>
                 <div className="mb-5">
                     <label className="block mb-2">Name</label>
                     <input
                         required
-                        className="text-black border border-gray-400 p-2 w-full"
+                        className="text-black border rounded-sm border-y-red-700 p-20 w-full"
                         type="text"
                         value={name}
                         onChange={handleNameChange}
@@ -59,7 +59,7 @@ export default function NewEvent() {
                 <div className="mb-5">
                     <label className="block mb-2">Quantity</label>
                     <input
-                        className="text-black border border-gray-400 p-2 w-full"
+                        className="text-black border rounded-md border-gray-400 p-5 w-full"
                         type="number"
                         min="1"
                         max="99"
@@ -70,7 +70,7 @@ export default function NewEvent() {
                 <div className="mb-5">
                     <label className="block mb-2">Category</label>
                     <select
-                        className="text-black border border-gray-400 p-2 w-full"
+                        className="text-black border rounded-lg border-gray-400 p-5 w-full"
                         value={catergory}
                         onChange={handleCategoryChange}
                     >
@@ -89,7 +89,7 @@ export default function NewEvent() {
                 </div>
                 <button
                 type ="submit"
-                className="bg-blue-500 text-white px-4 py-2 rounded">
+                className="bg-blue-500 hover:bg-red-400 text-white px-4 py-2 rounded-full ">
                     Submit
                 </button>
             </form>
